@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Unofficial Github Mobile </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Mobile CSS bits -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css"/>
+
+    <!-- Javascript includes -->
+    <!--<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write( '<script src="js/libs/jquery-1.6.4.min.js">\x3C/script>' )</script>
+    <script src="js/libs/knockout-latest.debug.js"></script>
+    <script src="js/libs/knockout.mapping-latest.debug.js"></script>
+    <script src="js/libs/github.js"></script>
+    <script src="js/mobileinit.js"></script>
+    <script src="js/libs/jquery.mobile-1.0.1.min.js"></script>
+    <script src="coffee/app.js"></script>
+</head>
+<body>
+<div data-role="page" id="home" data-theme="c">
+
+    <div data-role="header">
+        <h1>UN-official Github Mobile</h1>
+        <!--<a href="#settings" data-role="button" data-icon="gear"-->
+        <!--class="ui-btn-right">Settings</a>-->
+    </div>
+
+    <div data-role="content">
+
+        <form action="#" method="post">
+            <div data-role="fieldcontain">
+                <label for="userName">User Name</label>
+                <input type="text" name="userName" id="userName" data-bind="value: user"/>
+            </div>
+        </form>
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
+            <li data-role="list-divider">Github Data</li>
+            <li><a href="#repo">User Repos</a></li>
+            <li><a href="#watchList">Repos You Watch</a></li>
+            <li><a href="#following">Follow-[ed][ing]</a></li>
+            <li><a href="">More</a></li>
+            <li><a href="">More</a></li>
+        </ul>
+<hr>
+        <button data-theme="a" data-bind="click: getuserData">Git User Data</button>
+    </div>
+</div>
+
+<!--End HOME-->
+
+<!--<div data-role="page" id="settings" data-theme="c">-->
+
+<!--<div data-role="header">-->
+<!--<h1>Github Account Settings</h1>-->
+
+<!--</div>-->
+
+<!--<div data-role="content">-->
+
+<!--<form action="#" method="post">-->
+<!--<div data-role="fieldcontain">-->
+<!--<label for="userName">Enter UserName</label>-->
+<!--<input type="text" name="userName" id="userName" data-bind="value: user"/>-->
+<!--</div>-->
+<!--<div data-role="fieldcontain">-->
+<!--<label for="passWord">Enter API Token</label>-->
+<!--<input type="text" name="passWord" id="passWord" data-bind="value: pass"/>-->
+<!--</div>-->
+<!--</form>-->
+<!---->
+<!--</div>-->
+
+<!--</div>-->
+
+<!-- End Settings-->
+
+<div data-role="page" id="repo" data-theme="c">
+
+    <div data-role="header">
+        <h1>Github Mobile User Repos</h1>
+        <!--<a href="#settings" data-role="button" data-icon="gear"-->
+        <!--class="ui-btn-right">Settings</a>-->
+    </div>
+
+    <div data-role="content">
+
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" id="userRepo">
+
+        </ul>
+
+    </div>
+</div>
+<!--End Repos-->
+
+<div data-role="page" id="following" data-theme="c">
+
+    <div data-role="header">
+        <h1>Github Mobile User Follow-[ed][ing]</h1>
+        <!--<a href="#settings" data-role="button" data-icon="gear"-->
+        <!--class="ui-btn-right">Settings</a>-->
+    </div>
+
+    <div data-role="content">
+        <p>Following the user:</p>
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" id="userFollowed">
+        </ul>
+        <p>The user follows:</p>
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" id="userFollowing">
+        </ul>
+
+    </div>
+</div>
+<!--End Repos-->
+
+<div data-role="page" id="watchList" data-theme="c">
+
+    <div data-role="header">
+        <h1>Github Mobile Watched Repos</h1>
+        <!--<a href="#settings" data-role="button" data-icon="gear"-->
+        <!--class="ui-btn-right">Settings</a>-->
+    </div>
+
+    <div data-role="content">
+
+        <!--This takes data from observableArray and populates this list-->
+        <!--<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a" data-bind="foreach: watched">-->
+            <!--<li data-role="list-divider"> Repo: <h3 data-bind="text: name"></h3>-->
+                    <!--<li><h4>Description:</h4>-->
+                        <!--<p data-bind="text: description"></p>-->
+                <!--<span class="ui-li-count">Forks: <span data-bind="text: forks"></span> - Issues: <span-->
+                        <!--data-bind="text: open_issues"></span>-->
+                                          <!--- Watchers: <span data-bind="text: watchers"></span></span>-->
+                        <!--<p> <h4>Language: </h4></p>-->
+                        <!--<p data-bind="text: language"></p>-->
+                        <!--<p> <h4>Owner:</h4></p>-->
+                        <!--<p data-bind="text: owner"></p>-->
+                        <!--<p> <h4>URL:</h4>-->
+                        <!--<p data-bind="text: url"></p>-->
+                    <!--</li>-->
+                <!--</ul>-->
+
+        <!--This is populated from application.js-->
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" id="watched">
+        </ul>
+    </div>
+</div>
+<!--End Watch Repos-->
+</body>
+</html>
