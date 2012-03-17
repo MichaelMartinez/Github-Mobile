@@ -25,6 +25,7 @@ MIT: [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.
 
 * jQuery: MIT/GPL license
 * jQuery Mobile: MIT/GPL license
+* jQuery Mobile Boiler Plate: MIT License
 * Knockout JS: MIT license
 * Coffee-Script: [https://github.com/jashkenas/coffee-script/blob/master/LICENSE](https://github.com/jashkenas/coffee-script/blob/master/LICENSE)
 
