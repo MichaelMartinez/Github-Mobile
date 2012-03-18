@@ -24,6 +24,7 @@ MIT: [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.
 ### 3rd party libraries:
 
 * jQuery: MIT/GPL license
+* Github-api: [https://github.com/fitzgen/github-api/blob/master/LICENSE](https://github.com/fitzgen/github-api/blob/master/LICENSE)
 * jQuery Mobile: MIT/GPL license
 * jQuery Mobile Boiler Plate: MIT License
 * Knockout JS: MIT license
